@@ -1,13 +1,13 @@
-resource "aws_security_group" "RDS_security_group" {
-  name        = "RDS_security_group"
+resource "aws_security_group" "Reddis_security_group" {
+  name        = "Reddis-security-group"
   description = "Allow TLS inbound traffic traffic"
   vpc_id      = var.vpc_id
 
 
   ingress {
-    description = "mysql"
-    from_port   = 3306
-    to_port     = 3306
+    description = "reddis"
+    from_port   = 6379
+    to_port     = 6379
     protocol    = "tcp"
     cidr_blocks = [var.vpc_cidr]
   }
@@ -21,7 +21,7 @@ egress {
   }
 
   tags = {
-    Name = "RDS_security_group"
+    Name = "Reddis_security_group"
   }
 
 }
