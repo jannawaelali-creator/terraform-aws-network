@@ -3,7 +3,7 @@ vpc_cidr= "10.0.0.0/16"
 
 subnet_map=[
 {  name="public_subnet_1"
-   cidr= "10.0.1.0/24"
+   cidr= "10.0.5.0/24"
    type= "public"
     az= "us-east-1a"
 

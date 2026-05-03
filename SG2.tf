@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow-ssh-port_3000" {
-  name        = "allow_ssh and port 3000 only "
+  name        = "allow_ssh and port 3000 only"
   description = "Allow TLS inbound traffic and all outbound traffic"
   vpc_id      = module.network.vpc_id
 
