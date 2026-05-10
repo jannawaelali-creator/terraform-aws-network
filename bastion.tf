@@ -5,7 +5,7 @@ resource "aws_instance" "bastion" {
   subnet_id                   = module.network.subnets["public_subnet_1"].id
   vpc_security_group_ids      = [aws_security_group.allow-ssh.id]
   associate_public_ip_address = true      
-  key_name                    = "terr"
+  key_name                    = "terr-new"
 
 
 provisioner "local-exec" {

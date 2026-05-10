@@ -18,3 +18,8 @@ resource "aws_route_table_association" "private2_association" {
   route_table_id = aws_route_table.private_rt.id
 }
 
+resource "aws_route" "private_nat_route" {
+  route_table_id         = aws_route_table.private_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.nat.id
+}
