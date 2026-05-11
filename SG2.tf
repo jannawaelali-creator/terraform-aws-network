@@ -13,12 +13,12 @@ resource "aws_security_group" "allow-ssh-port_3000" {
   }
 
 
-
   ingress {
-    to_port     = 3000
-    from_port   = 3000
-    protocol    = "tcp"
-    cidr_blocks = [module.network.vpc_cidr_block]
+    description     = "HTTP from ALB"
+    from_port       = 80
+    to_port         = 80
+    protocol        = "tcp"
+    security_groups = [aws_security_group.alb-SG.id]
   }
 
 
