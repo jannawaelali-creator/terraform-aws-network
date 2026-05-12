@@ -1,0 +1,25 @@
+- hosts: jenkins_slave
+  become: yes
+
+  tasks:
+    - name: Install required tools
+      dnf:
+        name:
+          - java-21-amazon-corretto
+          - git
+          - docker
+        state: present
+
+    - name: Enable and start Docker service
+      systemd:
+        name: docker
+        enabled: true
+        state: started
+
+    - name: Add ec2-user to docker group
+      user:
+        name: ec2-user
+        groups: docker
+        append: true
+
+
