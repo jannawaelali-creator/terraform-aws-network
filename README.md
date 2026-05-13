@@ -41,7 +41,7 @@ This project demonstrates a **security-first cloud architecture**, placing all c
 2. Initialize and apply the configuration:
    ```bash
    terraform init
-   terraform select workspace dev
+   terraform workspace select dev
    terraform apply --auto-approve
    ```
 3. **Important:** Note the outputs provided by Terraform, specifically the ALB DNS name, RDS endpoints, Redis endpoints, and the IP addresses of your Bastion and Private EC2 instances.
