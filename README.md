@@ -95,4 +95,9 @@ Because the Jenkins agent is in a private subnet, it must initiate the connectio
 To test if the application has successfully connected to the stateful backend databases, navigate to the ALB DNS name generated in Step 1 in your web browser:
 
 *   **Test RDS:** `http://<ALB_DNS_NAME>/db` -> Should return *db connection successful*.
+  <img width="761" height="215" alt="image" src="https://github.com/user-attachments/assets/fc5afee2-6172-4738-bf62-18de618bf596" />
+
 *   **Test Redis:** `http://<ALB_DNS_NAME>/redis` -> Should return *redis is successfully connected*.
+ <img width="1245" height="277" alt="image" src="https://github.com/user-attachments/assets/765f5024-2e35-4aaa-b359-635f11c0ea8b" />
+
+
